@@ -1,8 +1,11 @@
 package com.local.portfolio.data.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
 @Table(name = "stock_price")
 public class StockPrice {

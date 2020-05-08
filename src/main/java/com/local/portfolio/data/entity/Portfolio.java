@@ -1,10 +1,13 @@
 package com.local.portfolio.data.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 /**
  * @author Sourabh
  **/
+@Data
 @Entity
 @Table(name = "portfolio")
 public class Portfolio {
