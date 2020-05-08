@@ -11,5 +11,4 @@ public class PortfolioTrackerApplication {
     public static void main(String[] args) {
         SpringApplication.run(PortfolioTrackerApplication.class, args);
     }
-
 }

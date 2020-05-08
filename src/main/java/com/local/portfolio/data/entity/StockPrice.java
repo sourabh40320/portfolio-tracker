@@ -4,17 +4,21 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "stock_price")
 public class StockPrice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "symbol")
-    private Stock stock;
-    
+
+    @Column(nullable = false, updatable = false, insertable = false)
+    private Long stockId;
+
+    @Column(nullable = false)
     private Double price;
-    private Date date;
-    private Date autoUpdateTime;
+
+    @Column(nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updated_on;
+
 }
